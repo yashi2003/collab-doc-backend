@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: collab-doc-service
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/collab_docs
+      auto-index-creation: true
+
+  redis:
+    host: localhost
+    port: 6379
+
+app:
+  node-id: ${HOSTNAME:node-1}
+  snapshot-interval: 50  # snapshot document every 50 operations
